@@ -169,6 +169,20 @@ header {
 	}
 }
 
+.order {
+	&_createButton {
+		display: none;
+		font-size: 25px;
+		cursor: pointer;
+		border: thin solid black;
+		width: 300px;
+	}
+}
+
+#orderForm {
+	display: none;
+}
+
 
 
 

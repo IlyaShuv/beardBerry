@@ -13,6 +13,18 @@
 		</div>
 	</section>
 
+	<button class="order_createButton">Оформить заказ</button>
+	
+	<div id="orderForm">
+		<form action="tele.php" method="POST">
+			<input class="orderForm_input" type="text" name="name" placeholder="Ваше имя" maxlength="100" required><br>
+			<input class="orderForm_input" type="text" name="phone" placeholder="Ваш телефон" maxlength="12" required><br>
+			<textarea id="comment" name="comment"></textarea><br>
+			<button type="submit" id="buy">Заказать</button>
+			<div>Нажимая на кнопку "Заказать" вы подтверждаете согласие на обработку персональных данных</div>
+		</form>
+	</div>
+
 <script src="js/jquery-3.3.1.min.js"></script>
 <script src="js/cart.js"></script>
 </body>
