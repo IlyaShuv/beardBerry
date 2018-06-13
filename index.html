@@ -5,6 +5,7 @@
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<link rel="stylesheet" type="text/css" href="css/animate.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 </head>
 <body>
 	<header>
@@ -33,6 +34,14 @@
 		</div>
 	</header>
 
+	<div class="container">
+		<div id="miniCart">
+			<i class="fas fa-shopping-cart miniCart_img"></i>
+			<div id="miniCart_goods"></div>
+			<button class='miniCart_button'>Оформить заказ</button>
+		</div>				
+	</div>
+
 	<section id="shortDescription">
 		<div class="container">
 			<div class="shortDescription_text">
@@ -44,7 +53,9 @@
 
 	<section id="catalog">
 		<div class="container">
-			
+			<div id="catalog_goods">
+				
+			</div>
 		</div>
 	</section>
 
@@ -63,5 +74,11 @@
 	<footer>
 		
 	</footer>
+
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/eshop.js"></script>
+	<script>
+		start();
+	</script>
 </body>
 </html>

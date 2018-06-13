@@ -54,6 +54,10 @@ header {
   font-size: 24px;
 }
 
+.menu_link:hover {
+  color: white;
+}
+
 .menu_phone {
   display: block;
   color: #F5E8DA;
@@ -95,4 +99,54 @@ header {
   margin-bottom: 100px;
   margin-right: 130px;
   margin-left: 130px;
+}
+
+#miniCart {
+  position: fixed;
+  border: thin rgba(32, 32, 32, 0.5) solid;
+  background-color: rgba(32, 32, 32, 0.5);
+  border-radius: 20px;
+  text-align: center;
+  margin-right: 50px;
+  margin-left: 800px;
+  padding: 5px;
+  width: 100px;
+  bottom: 30px;
+}
+
+#miniCart_goods {
+  display: inline-block;
+  color: #F5E8DA;
+  font-size: 30px;
+}
+
+.miniCart_img {
+  font-size: 35px;
+  color: #F5E8DA;
+  display: inline-block;
+}
+
+.miniCart_button {
+  display: none;
+  background-color: #F5E8DA;
+  border: thin #F5E8DA solid;
+  border-radius: 10px;
+}
+
+#catalog {
+  background-color: #F2F2F2;
+  height: 500px;
+}
+
+.catalog_img {
+  width: 200px;
+}
+
+.catalog_singleGoods {
+  width: 250px;
+  height: 350px;
+  border: thin solid black;
+  margin: 10px;
+  float: left;
+  text-align: center;
 }

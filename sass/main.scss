@@ -44,13 +44,16 @@ header {
 		margin-left: 14px;
 		&:first-child {
 			margin-left: 80px;
-		}	
+		}
 	}
 
 	&_link {
 		color: #F5E8DA;
 		text-decoration: none;
 		font-size: 24px;
+		&:hover {
+			color: white;
+		}
 	}
 
 	&_phone {
@@ -100,5 +103,64 @@ header {
 		left: 130px;
 	}	
 }
+
+#miniCart {
+	position: fixed;
+	border: thin rgba(32, 32, 32, 0.5) solid;
+	background-color: rgba(32, 32, 32, 0.5);
+	border-radius: 20px;
+	text-align: center;
+	margin: {
+		right: 50px;
+		left: 800px;
+	}	
+	padding: 5px;
+	width: 100px;
+	bottom: 30px;
+	&_goods {
+		display: inline-block;
+		color: #F5E8DA;
+		font-size: 30px;
+	}
+}
+
+.miniCart {
+	&_img {
+		font-size: 35px;
+		color: #F5E8DA;
+		display: inline-block;
+	}
+	&_button {
+		display: none;
+		background-color: #F5E8DA;
+		border: thin #F5E8DA solid;
+		border-radius: 10px;
+	}
+}
+
+#catalog {
+	background-color: #F2F2F2;
+	height: 500px;
+}
+
+.catalog {
+	&_img {
+		width: 200px;
+	}
+	&_singleGoods {
+		width: 250px;
+		height: 350px;
+		border: thin solid black;
+		margin: 10px;
+		float: left;
+		text-align: center;
+	}
+}
+
+
+
+
+
+
 
 
