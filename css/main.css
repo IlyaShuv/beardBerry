@@ -45,7 +45,11 @@ header {
 }
 
 .menu_item:first-child {
-  margin-left: 80px;
+  margin-left: 40px;
+}
+
+.menu_item-cart {
+  float: right;
 }
 
 .menu_link {
@@ -66,7 +70,7 @@ header {
   margin-top: 0;
   margin-bottom: 0;
   margin-left: 0;
-  margin-right: 80px;
+  margin-right: 40px;
 }
 
 .heading {
@@ -103,8 +107,8 @@ header {
 
 #miniCart {
   position: fixed;
-  border: thin rgba(32, 32, 32, 0.5) solid;
-  background-color: rgba(32, 32, 32, 0.5);
+  border: thin rgba(32, 32, 32, 0.2) solid;
+  background-color: rgba(32, 32, 32, 0.4);
   border-radius: 20px;
   text-align: center;
   margin-right: 50px;
@@ -112,12 +116,6 @@ header {
   padding: 5px;
   width: 100px;
   bottom: 30px;
-}
-
-#miniCart_goods {
-  display: inline-block;
-  color: #F5E8DA;
-  font-size: 30px;
 }
 
 .miniCart_img {
@@ -131,6 +129,23 @@ header {
   background-color: #F5E8DA;
   border: thin #F5E8DA solid;
   border-radius: 10px;
+  color: black;
+  text-decoration: none;
+}
+
+.miniCart_button:hover {
+  background-color: white;
+  border-color: white;
+}
+
+.miniCart_goods {
+  display: inline-block;
+  color: #F5E8DA;
+  font-size: 30px;
+}
+
+.miniCart_goods-header {
+  font-size: 24px;
 }
 
 #catalog {

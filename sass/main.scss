@@ -43,7 +43,10 @@ header {
 		margin-right: 14px;
 		margin-left: 14px;
 		&:first-child {
-			margin-left: 80px;
+			margin-left: 40px;
+		}
+		&-cart {
+			float: right;	
 		}
 	}
 
@@ -65,7 +68,7 @@ header {
 			top: 0;
 			bottom: 0;
 			left: 0;
-			right: 80px;
+			right: 40px;
 		}
 	}
 }
@@ -106,8 +109,8 @@ header {
 
 #miniCart {
 	position: fixed;
-	border: thin rgba(32, 32, 32, 0.5) solid;
-	background-color: rgba(32, 32, 32, 0.5);
+	border: thin rgba(32, 32, 32, 0.2) solid;
+	background-color: rgba(32, 32, 32, 0.4);
 	border-radius: 20px;
 	text-align: center;
 	margin: {
@@ -117,11 +120,6 @@ header {
 	padding: 5px;
 	width: 100px;
 	bottom: 30px;
-	&_goods {
-		display: inline-block;
-		color: #F5E8DA;
-		font-size: 30px;
-	}
 }
 
 .miniCart {
@@ -135,6 +133,20 @@ header {
 		background-color: #F5E8DA;
 		border: thin #F5E8DA solid;
 		border-radius: 10px;
+		color: black;
+		text-decoration: none;
+		&:hover {
+			background-color: white;
+			border-color: white;
+		}
+	}
+	&_goods {
+		display: inline-block;
+		color: #F5E8DA;
+		font-size: 30px;
+		&-header {
+			font-size: 24px;
+		}
 	}
 }
 

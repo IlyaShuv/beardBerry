@@ -52,5 +52,5 @@ function showMiniCart() { //показывает содержимое корзи
 	if (count != 0) {
 		$('.miniCart_button').css('display', 'block');
 	}
-	$('#miniCart_goods').html(count);
+	$('.miniCart_goods').html(count);
 }
