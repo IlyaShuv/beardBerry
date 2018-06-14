@@ -13,15 +13,14 @@ function loadGoods() {//загружаем товары на страницу
 		//console.log(data);
 		var out = "";
 		for (var key in data) {
-			var caption = "";
-			caption += '<div class=&quot;fancy_captionText&quot;>' + data[key].description + '<br>Стоимость: ' + data[key].cost+' рублей.<br><button class=&quot;fancy_buyButton&quot; data-art=&quot;'+key+'&quot;>Купить</button><div id=&quot;fancy_buyDone&quot;></div>';
-			out += '<div class="catalog_singleGoods"><a class="catalog_fancy" data-fancybox="images" data-caption="'+caption+'" href="'+data[key].image+'">';
-			out += '<h3>'+data[key]['name']+'</h3>';
+		
+			out += '<div class="catalog_singleGoods"><a class="catalog_fancy" href="good.html?title='+data[key].name+'&image='+data[key].image+'&description='+data[key].description+'&cost='+data[key].cost+'&articul='+key+'"; data-fancybox data-options="{&quot;type&quot; : &quot;iframe&quot;, &quot;iframe&quot; : {&quot;preload&quot; : false, &quot;css&quot; : {&quot;width&quot; : &quot;600px&quot;}}}">';
+			out += '<h3 class="catalog_singleGoodsTitle">'+data[key]['name']+'</h3>';
 			out += '<p>'+data[key]['cost']+'руб.</p>';
 			out += '<img class="catalog_img" src="'+data[key].image+'"></a>';
 			out += '<button class="catalog_button" data-art="'+key+'">Купить</button>';
 			out += '</div>';
-		}
+		}1
 		$('#catalog_goods').html(out);
 		$('.catalog_button').on('click', addToCart);
 		$('.fancy_buyButton').on('click', funcClick);
@@ -35,14 +34,14 @@ function loadGoods() {//загружаем товары на страницу
     	],
     	idleTime: 36000,
     	openEffect: 'none', 
-			closeEffect: 'none', 
+			closeEffect: 'none',
 			afterShow: function() { 
+
 				$(".fancy_buyButton").click(function() { 
 					addToCart.call(this);
 					$('#fancy_buyDone').html("Добавлено в корзину");
-
 				}); 
-			}, 
+			},
 		});
 	});
 }

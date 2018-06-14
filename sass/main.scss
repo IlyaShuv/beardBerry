@@ -166,6 +166,9 @@ header {
 		margin: 10px;
 		float: left;
 		text-align: center;
+		&Title {
+			height: 35px;
+		}
 	}
 }
 
@@ -219,6 +222,15 @@ header {
 		min-width: 300px;
 		background-color:rgba(32,32,32,0.5)
 	} 
+}
+
+.good {
+	&_img {
+		height: 500px;
+		&Div {
+			text-align: center;
+		}
+	}
 }
 
 

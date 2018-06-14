@@ -166,6 +166,10 @@ header {
   text-align: center;
 }
 
+.catalog_singleGoodsTitle {
+  height: 35px;
+}
+
 .order_createButton {
   display: none;
   font-size: 25px;
@@ -211,4 +215,12 @@ header {
   width: 820px;
   min-width: 300px;
   background-color: rgba(32, 32, 32, 0.5);
+}
+
+.good_img {
+  height: 500px;
+}
+
+.good_imgDiv {
+  text-align: center;
 }

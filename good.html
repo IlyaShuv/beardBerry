@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Товар</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body onload="onLoad()">
+
+	<div class="good_title"></div>
+	<div class="good_imgDiv"><img class="good_img" src="" alt="Товар"></div>
+	<div class="good_description"></div>
+	<div class="good_cost"></div>
+	<div class="good_buyButton"></div>
+
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script>
+		function onLoad() {
+			var params = window.location.href.split("?")[1];
+			var arrParams = params.split("&");
+			var title = arrParams[0].split("=")[1];
+			var image = arrParams[1].split("=")[1];
+			var description = arrParams[2].split("=")[1];
+			var cost = arrParams[3].split("=")[1];
+			var articul = arrParams[4].split("=")[1];
+
+			$(".good_title").html( decodeURIComponent(title) );
+			$(".good_img").attr("src", decodeURIComponent(image) );
+			$(".good_description").html( decodeURIComponent(description) );
+			$(".good_cost").html( decodeURIComponent(cost) );
+			$(".good_buyButton").html( decodeURIComponent(articul) );
+		}
+	</script>
+
+</body>
+</html>
