@@ -177,3 +177,38 @@ header {
 #orderForm {
   display: none;
 }
+
+.fancy_buyButton {
+  display: inline-block;
+  cursor: pointer;
+  margin-left: 0 auto;
+  margin-right: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 0;
+  padding: 5px;
+  font-size: 20px;
+  font-weight: 500;
+  border: thin solid white;
+  background-color: white;
+  color: black;
+  border-radius: 20px;
+  width: 200px;
+}
+
+.fancy_cost {
+  font-size: 20px;
+  margin-top: 3px;
+  margin-bottom: 0;
+}
+
+.fancy_buyDone {
+  color: blue;
+}
+
+.fancy_captionText {
+  display: inline-block;
+  margin: 0 auto;
+  width: 820px;
+  min-width: 300px;
+  background-color: rgba(32, 32, 32, 0.5);
+}
