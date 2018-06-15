@@ -23,7 +23,6 @@ function loadGoods() {//загружаем товары на страницу
 		}1
 		$('#catalog_goods').html(out);
 		$('.catalog_button').on('click', addToCart);
-		$('.fancy_buyButton').on('click', funcClick);
 		$(".catalog_fancy").fancybox({
 			transitionIn: 'elastic',
 			transitionOut: 'elastic',
@@ -35,14 +34,32 @@ function loadGoods() {//загружаем товары на страницу
     	idleTime: 36000,
     	openEffect: 'none', 
 			closeEffect: 'none',
-			afterShow: function() { 
-
-				$(".fancy_buyButton").click(function() { 
-					addToCart.call(this);
-					$('#fancy_buyDone').html("Добавлено в корзину");
-				}); 
-			},
+			afterClose: function() {
+				checkCart();
+				showMiniCart();
+			}
 		});
+	});
+}
+
+function showSingleGood() {
+	checkCart();
+	var params = window.location.href.split("?")[1];
+	var arrParams = params.split("&");
+	var title = arrParams[0].split("=")[1];
+	var image = arrParams[1].split("=")[1];
+	var description = arrParams[2].split("=")[1];
+	var cost = arrParams[3].split("=")[1];
+	var articul = arrParams[4].split("=")[1];
+
+	$(".good_title").html( decodeURIComponent(title) );
+	$(".good_img").attr("src", decodeURIComponent(image) );
+	$(".good_description").html( decodeURIComponent(description) );
+	$(".good_cost").html( decodeURIComponent("Стоимость: "+cost+" рублей") );
+	$(".good_buyButton").attr("data-art", decodeURIComponent(articul) );
+
+	$('document').ready(function() {
+		$(".good_buyButton").on("click", addToCart);
 	});
 }
 
@@ -63,10 +80,6 @@ function checkCart() { //проверяем наличие корзины в loc
 	if (localStorage.getItem('cart') != null) {
 		cart = JSON.parse(localStorage.getItem('cart'));
 	}
-}
-
-function funcClick() {
-	alert("Нажали!");
 }
 
 function showMiniCart() { //показывает содержимое корзины

@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
-<body onload="onLoad()">
+<body onload="showSingleGood()">
 
 	<div class="good_title"></div>
 	<div class="good_imgDiv"><img class="good_img" src="" alt="Товар"></div>
@@ -14,23 +14,7 @@
 	<div class="good_buttonWrap"><button class="good_buyButton" data-art="">Купить</button></div>
 
 	<script src="js/jquery-3.3.1.min.js"></script>
-	<script>
-		function onLoad() {
-			var params = window.location.href.split("?")[1];
-			var arrParams = params.split("&");
-			var title = arrParams[0].split("=")[1];
-			var image = arrParams[1].split("=")[1];
-			var description = arrParams[2].split("=")[1];
-			var cost = arrParams[3].split("=")[1];
-			var articul = arrParams[4].split("=")[1];
-
-			$(".good_title").html( decodeURIComponent(title) );
-			$(".good_img").attr("src", decodeURIComponent(image) );
-			$(".good_description").html( decodeURIComponent(description) );
-			$(".good_cost").html( decodeURIComponent("Стоимость: "+cost+" рублей") );
-			$(".good_buyButton").attr("data-art", decodeURIComponent(articul) );
-		}
-	</script>
+	<script src="js/eshop.js"></script>
 
 </body>
 </html>
