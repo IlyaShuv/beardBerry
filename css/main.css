@@ -167,7 +167,17 @@ header {
 }
 
 .catalog_singleGoodsTitle {
-  height: 35px;
+  font-size: 18px;
+  color: black;
+  height: 40px;
+}
+
+.catalog_singleGoodsCost {
+  color: black;
+}
+
+.catalog_fancy {
+  text-decoration: none;
 }
 
 .order_createButton {
@@ -217,10 +227,51 @@ header {
   background-color: rgba(32, 32, 32, 0.5);
 }
 
+.good_title {
+  text-align: center;
+  font-size: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
 .good_img {
-  height: 500px;
+  height: 460px;
 }
 
 .good_imgDiv {
+  text-align: center;
+}
+
+.good_description {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 300;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.good_cost {
+  text-align: center;
+  font-weight: 700;
+  padding: 5px;
+}
+
+.good_buyButton {
+  cursor: pointer;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  padding: 5px;
+  font-size: 20px;
+  font-weight: 500;
+  border: thin solid black;
+  background-color: white;
+  color: black;
+  border-radius: 20px;
+  width: 200px;
+}
+
+.good_buttonWrap {
   text-align: center;
 }

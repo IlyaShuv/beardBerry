@@ -14,9 +14,9 @@ function loadGoods() {//загружаем товары на страницу
 		var out = "";
 		for (var key in data) {
 		
-			out += '<div class="catalog_singleGoods"><a class="catalog_fancy" href="good.html?title='+data[key].name+'&image='+data[key].image+'&description='+data[key].description+'&cost='+data[key].cost+'&articul='+key+'"; data-fancybox data-options="{&quot;type&quot; : &quot;iframe&quot;, &quot;iframe&quot; : {&quot;preload&quot; : false, &quot;css&quot; : {&quot;width&quot; : &quot;600px&quot;}}}">';
+			out += '<div class="catalog_singleGoods"><a class="catalog_fancy" href="good.html?title='+data[key].name+'&image='+data[key].image+'&description='+data[key].description+'&cost='+data[key].cost+'&articul='+key+'"; data-fancybox data-options="{&quot;type&quot; : &quot;iframe&quot;, &quot;iframe&quot; : {&quot;preload&quot; : false, &quot;css&quot; : {&quot;width&quot; : &quot;650px&quot;,&quot;height&quot; : &quot;720px&quot;}}}">';
 			out += '<h3 class="catalog_singleGoodsTitle">'+data[key]['name']+'</h3>';
-			out += '<p>'+data[key]['cost']+'руб.</p>';
+			out += '<p class="catalog_singleGoodsCost">'+data[key]['cost']+'руб.</p>';
 			out += '<img class="catalog_img" src="'+data[key].image+'"></a>';
 			out += '<button class="catalog_button" data-art="'+key+'">Купить</button>';
 			out += '</div>';

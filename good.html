@@ -11,7 +11,7 @@
 	<div class="good_imgDiv"><img class="good_img" src="" alt="Товар"></div>
 	<div class="good_description"></div>
 	<div class="good_cost"></div>
-	<div class="good_buyButton"></div>
+	<div class="good_buttonWrap"><button class="good_buyButton" data-art="">Купить</button></div>
 
 	<script src="js/jquery-3.3.1.min.js"></script>
 	<script>
@@ -27,8 +27,8 @@
 			$(".good_title").html( decodeURIComponent(title) );
 			$(".good_img").attr("src", decodeURIComponent(image) );
 			$(".good_description").html( decodeURIComponent(description) );
-			$(".good_cost").html( decodeURIComponent(cost) );
-			$(".good_buyButton").html( decodeURIComponent(articul) );
+			$(".good_cost").html( decodeURIComponent("Стоимость: "+cost+" рублей") );
+			$(".good_buyButton").attr("data-art", decodeURIComponent(articul) );
 		}
 	</script>
 
