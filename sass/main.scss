@@ -7,8 +7,9 @@ body {
 }
 
 .container {
-	width: 960px;
+	width: 992px;
 	margin: 0 auto;
+	border: thin solid blue;
 	&-header {
 		border: thin solid #F5E8DA;
 	}	
@@ -127,6 +128,10 @@ header {
 		font-size: 35px;
 		color: #F5E8DA;
 		display: inline-block;
+		&-good {
+			font-size: 18px;
+			color: #707070;
+		}
 	}
 	&_button {
 		display: none;
@@ -152,7 +157,7 @@ header {
 
 #catalog {
 	background-color: #F2F2F2;
-	height: 500px;
+	height: 1500px;
 }
 
 .catalog {
@@ -160,20 +165,37 @@ header {
 		width: 200px;
 	}
 	&_singleGoods {
-		width: 250px;
-		height: 350px;
+		width: 230px;
+		height: 362px;
 		border: thin solid black;
-		margin: 10px;
+		margin: {
+			top: 10px;
+			bottom: 10px;
+			right: 8px;
+			left: 8px;
+		}
 		float: left;
 		text-align: center;
 		&Title {
 			font-size: 18px;
 			color: black;
-			height: 40px;
+			height: 50px;
+			padding: {
+				left: 10px;
+				right: 10px;
+			}
 		}
 		&Cost {
 			color: black;
 		}
+	}
+	&_button {
+		width: 80px;
+		border: solid black thin;
+		border-radius: 10px;
+		cursor: pointer;
+		padding: 4px;
+		background-color: white;
 	}
 	&_fancy {
 		text-decoration: none;
@@ -281,6 +303,19 @@ header {
 	}
 	&_buttonWrap {
 		text-align: center;
+	}
+	&_added {
+		font-size: 18px;
+		font-weight: 300;
+		text-align: center;
+		display: none;
+		color: #707070;
+	}
+	&_miniCartCount {
+		display: inline-block;
+		color: #707070;
+		font-size: 18px;
+		font-weight: 500;
 	}
 }
 

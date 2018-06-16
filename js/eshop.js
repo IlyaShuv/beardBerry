@@ -14,13 +14,13 @@ function loadGoods() {//загружаем товары на страницу
 		var out = "";
 		for (var key in data) {
 		
-			out += '<div class="catalog_singleGoods"><a class="catalog_fancy" href="good.html?title='+data[key].name+'&image='+data[key].image+'&description='+data[key].description+'&cost='+data[key].cost+'&articul='+key+'"; data-fancybox data-options="{&quot;type&quot; : &quot;iframe&quot;, &quot;iframe&quot; : {&quot;preload&quot; : false, &quot;css&quot; : {&quot;width&quot; : &quot;650px&quot;,&quot;height&quot; : &quot;720px&quot;}}}">';
+			out += '<div class="catalog_singleGoods"><a class="catalog_fancy" href="good.html?title='+data[key].name+'&image='+data[key].image+'&description='+data[key].description+'&cost='+data[key].cost+'&articul='+key+'"; data-fancybox data-options="{&quot;type&quot; : &quot;iframe&quot;, &quot;iframe&quot; : {&quot;preload&quot; : false, &quot;css&quot; : {&quot;width&quot; : &quot;650px&quot;,&quot;height&quot; : &quot;1150px&quot;}}}">';
 			out += '<h3 class="catalog_singleGoodsTitle">'+data[key]['name']+'</h3>';
-			out += '<p class="catalog_singleGoodsCost">'+data[key]['cost']+'руб.</p>';
+			out += '<p class="catalog_singleGoodsCost">'+data[key]['cost']+' руб.</p>';
 			out += '<img class="catalog_img" src="'+data[key].image+'"></a>';
 			out += '<button class="catalog_button" data-art="'+key+'">Купить</button>';
 			out += '</div>';
-		}1
+		}
 		$('#catalog_goods').html(out);
 		$('.catalog_button').on('click', addToCart);
 		$(".catalog_fancy").fancybox({
@@ -34,9 +34,13 @@ function loadGoods() {//загружаем товары на страницу
     	idleTime: 36000,
     	openEffect: 'none', 
 			closeEffect: 'none',
+			afterLoad: function() {
+				$('#miniCart').css('display', 'none');
+			},
 			afterClose: function() {
 				checkCart();
 				showMiniCart();
+				$('#miniCart').css('display', 'block');
 			}
 		});
 	});
@@ -60,6 +64,7 @@ function showSingleGood() {
 
 	$('document').ready(function() {
 		$(".good_buyButton").on("click", addToCart);
+		$(".good_buyButton").on("click", showGoodMiniCart);
 	});
 }
 
@@ -92,3 +97,14 @@ function showMiniCart() { //показывает содержимое корзи
 	}
 	$('.miniCart_goods').html(count);
 }
+
+function showGoodMiniCart() { //показывает содержимое корзины на странице товара
+	var count = 0;
+	for (var k in cart) {
+		count += 1 * cart[k];
+	}
+	$('.good_img').css('height', '440px');
+	$('.good_added').css('display', 'block');
+	$('.good_miniCartCount').html(count);
+}
+
