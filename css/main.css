@@ -31,7 +31,7 @@ body {
   clear: both;
 }
 
-header {
+.main_header {
   height: 100vh;
   min-height: 600px;
   padding-top: 30px;
@@ -141,6 +141,7 @@ header {
 
 .miniCart_button {
   display: none;
+  font-weight: 300;
   background-color: #F5E8DA;
   border: thin #F5E8DA solid;
   border-radius: 10px;
@@ -325,6 +326,7 @@ header {
 
 #about {
   text-align: center;
+  margin-top: 60px;
   margin-bottom: 30px;
 }
 
@@ -342,6 +344,19 @@ header {
 .about_img {
   width: 500px;
   border: thick solid #F5E8DA;
+}
+
+#delivery {
+  background-color: #F2F2F2;
+  padding-top: 1px;
+  padding-bottom: 60px;
+}
+
+.delivery_text {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 300;
+  line-height: 1.2;
 }
 
 #contacts {
@@ -377,4 +392,76 @@ header {
 .contacts_link a {
   font-size: 32px;
   color: black;
+}
+
+.cart_header {
+  background: url("/img/Fon.jpg") no-repeat center center/cover;
+  height: 100px;
+  text-align: center;
+}
+
+.cart_headerItem {
+  display: inline-block;
+}
+
+.cart_headerItem-logo {
+  height: 90px;
+  margin-left: 200px;
+  margin-right: 100px;
+  float: left;
+}
+
+.cart_headerItem-title {
+  margin: 0 auto;
+  width: 260px;
+  padding-top: 20px;
+}
+
+.cart_headerItem-phone {
+  font-size: 35px;
+  color: #F5E8DA;
+  margin-right: 150px;
+  margin-top: 20px;
+  float: right;
+}
+
+.cart_title {
+  display: inline-block;
+}
+
+.cart_title-left {
+  text-decoration: none;
+  color: black;
+  font-size: 24px;
+  text-align: center;
+  width: 140px;
+  float: left;
+  margin-left: 80px;
+  margin-top: 30px;
+  border: thin solid black;
+  border-radius: 16px;
+  padding: 10px;
+}
+
+.cart_title-right {
+  float: right;
+}
+
+.cart_title-center {
+  width: 500px;
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+.cartWrap {
+  text-align: center;
+}
+
+.cart_img {
+  height: 200px;
+}
+
+.cart_row {
+  display: inline-block;
 }

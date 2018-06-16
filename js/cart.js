@@ -17,13 +17,14 @@ $.getJSON('goods/goods.json', function(data) {
 		else {
 			var out = '';
 			for (var key in cart) {
-				out += '<button class="cart_butDelete" data-art="'+key+'">x</button>';
-				out += '<img class="catalog_img" src="'+ goods[key].image+'" alt="товар"><br>';
-				out += goods[key].name;
-				out += '<button class="cart_butMinus" data-art="'+key+'">-</button>';
-				out += cart[key];
-				out += '<button class="cart_butPlus" data-art="'+key+'">+</button>';
-				out += cart[key]*goods[key].cost;
+				out += '<div class="cart_rowWrap"><div class="cart_row"><img class="cart_img cart_row" src="'+ goods[key].image+'" alt="товар">';
+				out += '<div class="cart_name cart_row">' + goods[key].name + '</div>'; 
+				out += '<div class="cart_cost cart_row">' + goods[key].cost + '</div>';
+				out += '<button class="cart_butMinus cart_row" data-art="'+key+'">-</button>';
+				out += '<div class="cart_count cart_row">' + cart[key] + '</div>';
+				out += '<button class="cart_butPlus cart_row" data-art="'+key+'">+</button>';
+				out += '<div class="cart_finalCost cart_row">' + cart[key]*goods[key].cost + '</div>';
+				out += '<button class="cart_butDelete cart_row" data-art="'+key+'">x</button></div>';
 				out += '<br>';
 			}
 			$('.order_createButton').css("display", "block");
