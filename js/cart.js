@@ -8,31 +8,53 @@ $.getJSON('goods/goods.json', function(data) {
 	showCart(); //вывожу товары на страницу
 
 	function showCart() {
+		var total = 0;
 		if ($.isEmptyObject(cart) ) { //проверка пуста ли корзина
-			var out = 'Корзина пуста. Добавьте товар в корзину <br><a href="index.html">Главная страница</a>';
+			var out = '<div class="cart_empty">Корзина пуста. Пожалуйста, добавьте товар в корзину. <br><a href="index.html#catalog">Перейти в каталог</a></div>';
 			$('#cart_main').html(out);
-			$('.order_createButton').css("display", "none");
-			$('#orderForm').css("display", "none");
+			$('.cart_createButton').css("display", "none");
+			$('.orderForm').css("display", "none");
+			$('.cartHead').css("display", "none");
+			$('.cart_totalCost').html("");
 		}
 		else {
 			var out = '';
 			for (var key in cart) {
-				out += '<div class="cart_rowWrap"><div class="cart_row"><img class="cart_img cart_row" src="'+ goods[key].image+'" alt="товар">';
-				out += '<div class="cart_name cart_row">' + goods[key].name + '</div>'; 
-				out += '<div class="cart_cost cart_row">' + goods[key].cost + '</div>';
+				out += '<div class="cart_rowWrap"><div class="cart_row"><img class="cart_img" src="'+ goods[key].image+'" alt="товар"></div>';
+				out += '<a class="cart_fancy cart_name cart_row" href="good.html?title='+data[key].name+'&image='+data[key].image+'&description='+data[key].description+'&cost='+data[key].cost+'&articul='+key+'"; data-fancybox data-options="{&quot;type&quot; : &quot;iframe&quot;, &quot;iframe&quot; : {&quot;preload&quot; : false, &quot;css&quot; : {&quot;width&quot; : &quot;650px&quot;,&quot;height&quot; : &quot;1150px&quot;}}}">' + goods[key].name + '</a>'; 
+				out += '<div class="cart_cost cart_row">' + goods[key].cost + 'руб.</div>';
 				out += '<button class="cart_butMinus cart_row" data-art="'+key+'">-</button>';
 				out += '<div class="cart_count cart_row">' + cart[key] + '</div>';
 				out += '<button class="cart_butPlus cart_row" data-art="'+key+'">+</button>';
-				out += '<div class="cart_finalCost cart_row">' + cart[key]*goods[key].cost + '</div>';
+				out += '<div class="cart_finalCost cart_row">' + cart[key]*goods[key].cost + 'руб.</div>';
 				out += '<button class="cart_butDelete cart_row" data-art="'+key+'">x</button></div>';
-				out += '<br>';
+				total += goods[key].cost*cart[key];
 			}
-			$('.order_createButton').css("display", "block");
 			$('#cart_main').html(out);
+			$('.cart_totalCost').html("Итого: " + total + " рублей");
+			$('.cart_createButton').css("display", "block");
+			$('.cartHead').css("display", "block");
 			$('.cart_butPlus').on('click', plusGoods);
 			$('.cart_butMinus').on('click', minusGoods);
 			$('.cart_butDelete').on('click', deleteGoods);
-			$('.order_createButton').on('click', showForm);
+			$('.cart_createButton').on('click', showForm);
+
+			$(".cart_fancy").fancybox({
+				transitionIn: 'elastic',
+				transitionOut: 'elastic',
+				backFocus: false,
+				loop: true,
+				buttons : [
+        	'close'
+    		],
+    		idleTime: 36000,
+    		openEffect: 'none', 
+				closeEffect: 'none',
+				afterClose: function() {
+					checkCart();
+					showCart();
+				}
+			});
 		}
 	}
 
@@ -63,7 +85,7 @@ $.getJSON('goods/goods.json', function(data) {
 	}
 
 	function showForm() { //выводим поля формы заказа при нажатии на кнопку оформить заказ;
-		$('#orderForm').css("display", "block");
+		$('.orderForm').css("display", "block");
 	}
 });
 

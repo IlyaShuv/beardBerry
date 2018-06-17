@@ -5,40 +5,63 @@
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="css/jquery.fancybox.min.css">
 </head>
 <body>
 	<header class="cart_header">
-		<div>
-			<img class="cart_headerItem cart_headerItem-logo" src="img/Logo_big.png">
-			<img class="cart_headerItem cart_headerItem-title" src="img/Title_big.png">
-			<div class="cart_headerItem cart_headerItem-phone">+7 915 428 70 96</div>
+		<div class="container">
+			<div>
+				<img class="cart_headerItem cart_headerItem-logo" src="img/Logo_big.png">
+				<img class="cart_headerItem cart_headerItem-title" src="img/Title_big.png">
+				<div class="cart_headerItem cart_headerItem-phone">+7 915 428 70 96</div>
+			</div>
 		</div>
 	</header>
 
-	<section>
+	<section id="cart">
 		<div class="container">
 			<div class="cart_titleWrap clearfix">
 				<a class="cart_title cart_title-left" href="index.html"><i class="fas fa-arrow-left"></i> Назад</a>
 				<h3 class="cart_title cart_title-center section_title">Ваша корзина</h3>
 				<div class="cart_title cart_title-right"></div>
 			</div>
+			<div class="cartHead">
+				<div class="cartHead_item cartHead_item-good">Товар</div>
+				<div class="cartHead_item cartHead_item-count">Количество</div>
+				<div class="cartHead_item cartHead_item-cost">Стоимость</div>
+			</div>
 			<div id="cart_main"></div>
+			<div class="cart_totalCost"></div>
+			<a href="#orderForm" class="cart_createButton">Продолжить</a>
 		</div>
 	</section>
-
-	<button class="order_createButton">Оформить заказ</button>
 	
-	<div id="orderForm">
-		<form action="tele.php" method="POST">
-			<input class="orderForm_input" type="text" name="name" placeholder="Ваше имя" maxlength="100" required><br>
-			<input class="orderForm_input" type="text" name="phone" placeholder="Ваш телефон" maxlength="12" required><br>
-			<textarea id="comment" name="comment"></textarea><br>
-			<button type="submit" id="buy">Заказать</button>
-			<div>Нажимая на кнопку "Заказать" вы подтверждаете согласие на обработку персональных данных</div>
-		</form>
-	</div>
+	<section id="orderForm">
+		<div class="container">
+			<div class="orderForm">
+				<form action="tele.php" method="POST">
+					<input class="orderForm_input" type="text" name="name" placeholder="Имя" maxlength="100" required><br>
+					<input class="orderForm_input" type="text" name="phone" placeholder="Контактный телефон" maxlength="12" required><br>
+					<input class="orderForm_input" type="text" name="E-mail" placeholder="E-mail" maxlength="100" required><br>
+					<input class="orderForm_input" type="text" name="address" placeholder="Адрес" maxlength="100" required><br>
+					<textarea class="orderForm_comment" name="comment"></textarea><br>
+					<button class="orderForm_button" type="orderForm_submit" id="buy">Отправить заказ</button>
+					<div class="orderForm_info">Нажимая на кнопку "Отправить заказ" вы подтверждаете согласие на обработку персональных данных</div>
+				</form>
+			</div>
+		</div>	
+	</section>	
 
-<script src="js/jquery-3.3.1.min.js"></script>
-<script src="js/cart.js"></script>
+	<footer class="cart_footer">
+		<div class="container">
+			<div class="contacts_cartText">Следите за нами в соцсетях: </div>
+			<div class="contacts_link"><a href="https://vk.com/beardberrystore"><i class="fab fa-vk"></i></a></div>
+			<div class="contacts_link"><a href="https://www.instagram.com/beardberry_store/"><i class="fab fa-instagram"></i></a></div>
+		</div>
+	</footer>
+
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/jquery.fancybox.min.js"></script>
+	<script src="js/cart.js"></script>
 </body>
 </html>
