@@ -39,13 +39,15 @@
 	<section id="orderForm">
 		<div class="container">
 			<div class="orderForm">
-				<form action="tele.php" method="POST">
+				<form action="php/order.php" method="POST">
 					<input class="orderForm_input" type="text" name="name" placeholder="Имя" maxlength="100" required><br>
 					<input class="orderForm_input" type="text" name="phone" placeholder="Контактный телефон" maxlength="12" required><br>
 					<input class="orderForm_input" type="text" name="E-mail" placeholder="E-mail" maxlength="100" required><br>
 					<input class="orderForm_input" type="text" name="address" placeholder="Адрес" maxlength="100" required><br>
+					<input class="orderForm_input-hidden orderForm_orderNumber" type="text" name="orderNumber"><br>
+					<input class="orderForm_input-hidden orderForm_orderItems" type="text" name="orderItems"><br>
 					<textarea class="orderForm_comment" name="comment" placeholder="Комментарии"></textarea><br>
-					<button class="orderForm_button" type="orderForm_submit" id="buy">Отправить заказ</button>
+					<button class="orderForm_button" type="submit" id="buy">Отправить заказ</button>
 					<div class="orderForm_info">Нажимая на кнопку "Отправить заказ" вы подтверждаете согласие на обработку персональных данных</div>
 				</form>
 			</div>

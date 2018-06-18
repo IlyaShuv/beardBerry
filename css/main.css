@@ -602,6 +602,10 @@ body {
   margin: 10px;
 }
 
+.orderForm_input-hidden {
+  display: none;
+}
+
 .orderForm_comment {
   font-size: 22px;
   padding: 10px;

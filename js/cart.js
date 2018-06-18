@@ -37,7 +37,11 @@ $.getJSON('goods/goods.json', function(data) {
 			$('.cart_butPlus').on('click', plusGoods);
 			$('.cart_butMinus').on('click', minusGoods);
 			$('.cart_butDelete').on('click', deleteGoods);
-			$('.cart_createButton').on('click', showForm);
+			$('.cart_createButton').on('click', function() {
+				showForm();
+				createOrderNumber();
+				createOrderItems();
+			});
 
 			$(".cart_fancy").fancybox({
 				transitionIn: 'elastic',
@@ -86,6 +90,42 @@ $.getJSON('goods/goods.json', function(data) {
 
 	function showForm() { //выводим поля формы заказа при нажатии на кнопку оформить заказ;
 		$('.orderForm').css("display", "block");
+	}
+
+	function createOrderNumber() {
+		var res = "";
+		var words = "qwertyuiopasdfghjklzxcvbnm";
+		var date = new Date();
+		res += date.getDate();
+		res += date.getHours();
+		res += date.getMinutes();
+		res += "-";
+
+		var max_position = words.length - 1;
+		for (i = 0; i < 3; i++) {
+			position = Math.floor( Math.random() * max_position );
+			res += words.substring(position, position + 1);
+		}
+
+		$('.orderForm_orderNumber').attr('value', res);
+	}
+
+	function createOrderItems() {
+		var res = "";
+		var total = 0;
+		for (var key in cart) {
+			res += data[key].name;
+			res += " (артикул: ";
+			res += key;
+			res += ") ";
+			res += " x";
+			res += cart[key];
+			res += ";\n"
+			total += cart[key] * goods[key].cost;
+		}
+		res += "Общая стоимость заказа: "
+		res += total;
+		$('.orderForm_orderItems').attr('value', res);
 	}
 });
 
