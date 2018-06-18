@@ -27,6 +27,25 @@
 	$mail->Body = 'Имя: ' .$name . '<br> Телефон: ' .$phone. '<br> E-mail: ' .$email. '<br> Адрес доставки: ' .$address. '<br> Заказ: ' .$orderItems. '<br> номер заказа: ' .$orderNumber; 
 	$mail->AltBody = ''; 
 
+
+	$token = "553541785:AAGUJALLfCn3kmmXEZcwdJZN0dMgBP7GSYM";
+	$chat_id = "-260356637";
+	$arr = array(
+		'Имя: ' => $name,
+		'Телефон: ' => $phone,
+		'E-mail: ' => $email,
+		'Адрес: ' => $address,
+		'Товары: ' => $orderItems,
+		'Номер заказа: ' => $orderNumber
+	);
+
+	foreach ($arr as $key => $value) {
+		$txt .= "<b>".$key."</b> ".$value."%0A"; 
+	};
+
+$sendToTelegram = fopen("https://api.telegram.org/bot{$token}/sendMessage?chat_id={$chat_id}
+	&parse_mode=html&text={$txt}","r");
+
 	if(!$mail->send()) { 
 		echo 'Error'; 
 	} else { 
