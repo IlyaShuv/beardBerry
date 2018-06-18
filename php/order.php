@@ -30,7 +30,7 @@
 	if(!$mail->send()) { 
 		echo 'Error'; 
 	} else { 
-		header('location: confirm.html'); 
+		header('location: ../confirm.html'); 
 	} 
 
 ?>
