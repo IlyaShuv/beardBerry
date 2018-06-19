@@ -1,7 +1,85 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
 
+@font-face { 
+	font-family: 'Elegance'; 
+	src: url('../fonts/Elegance/RoundedElegance-Regular.eot'); 
+	src: local('Elegance Regular'), local('RoundedElegance-Regular'), 
+	url('../fonts/Elegance/RoundedElegance-Regular.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/Elegance/RoundedElegance-Regular.woff') format('woff'), 
+	url('../fonts/Elegance/RoundedElegance-Regular.ttf') format('truetype'); 
+	font-weight: 400; 
+	font-style: normal; 
+} 
+
+@font-face { 
+	font-family: 'Helvetica'; 
+	src: url('../fonts/Helvetica/HelveticaThin/HelveticaThin.eot'); 
+	src: local('Helvetica Thin'), local('HelveticaThin'), 
+	url('../fonts/Helvetica/HelveticaThin/HelveticaThin.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/Helvetica/HelveticaThin/HelveticaThin.woff') format('woff'), 
+	url('../fonts/Helvetica/HelveticaThin/HelveticaThin.ttf') format('truetype'); 
+	font-weight: 100; 
+	font-style: normal; 
+} 
+
+@font-face { 
+	font-family: 'Helvetica'; 
+	src: url('../fonts/Helvetica/HelveticaLight/HelveticaLight.eot'); 
+	src: local('Helvetica Light'), local('HelveticaLight'), 
+	url('../fonts/Helvetica/HelveticaLight/HelveticaLight.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/Helvetica/HelveticaLight/HelveticaLight.woff') format('woff'), 
+	url('../fonts/Helvetica/HelveticaLight/HelveticaLight.ttf') format('truetype'); 
+	font-weight: 300; 
+	font-style: normal; 
+} 
+
+@font-face { 
+	font-family: 'Helvetica'; 
+	src: url('../fonts/Helvetica/HelveticaLightItalic/HelveticaLightItalic.eot'); 
+	src: local('Helvetica Light Italic'), local('HelveticaLightItalic'), 
+	url('../fonts/Helvetica/HelveticaLightItalic/HelveticaLightItalic.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/Helvetica/HelveticaLightItalic/HelveticaLightItalic.woff') format('woff'), 
+	url('../fonts/Helvetica/HelveticaLightItalic/HelveticaLightItalic.ttf') format('truetype'); 
+	font-weight: 300; 
+	font-style: italic; 
+} 
+
+@font-face { 
+	font-family: 'Helvetica'; 
+	src: url('../fonts/Helvetica/HelveticaRegular/HelveticaRegular.eot'); 
+	src: local('Helvetica Regular'), local('HelveticaRegular'), 
+	url('../fonts/Helvetica/HelveticaRegular/HelveticaRegular.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/Helvetica/HelveticaRegular/HelveticaRegular.woff') format('woff'), 
+	url('../fonts/Helvetica/HelveticaRegular/HelveticaRegular.ttf') format('truetype'); 
+	font-weight: 400; 
+	font-style: normal; 
+} 
+
+@font-face { 
+	font-family: 'Helvetica'; 
+	src: url('../fonts/Helvetica/HelveticaMedium/HelveticaMedium.eot'); 
+	src: local('Helvetica Medium'), local('HelveticaMedium'), 
+	url('../fonts/Helvetica/HelveticaMedium/HelveticaMedium.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/Helvetica/HelveticaMedium/HelveticaMedium.woff') format('woff'), 
+	url('../fonts/Helvetica/HelveticaMedium/HelveticaMedium.ttf') format('truetype'); 
+	font-weight: 500; 
+	font-style: normal; 
+} 
+
+@font-face { 
+	font-family: 'Helvetica'; 
+	src: url('../fonts/Helvetica/HelveticaBold/HelveticaBold.eot'); 
+	src: local('Helvetica Bold'), local('HelveticaBold'), 
+	url('../fonts/Helvetica/HelveticaBold/HelveticaBold.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/Helvetica/HelveticaBold/HelveticaBold.woff') format('woff'), 
+	url('../fonts/Helvetica/HelveticaBold/HelveticaBold.ttf') format('truetype'); 
+	font-weight: 700; 
+	font-style: normal; 
+} 
+
+
 body {
-	font-family: Roboto, Arial, sans-serif;
+	font-family: Helvetica, Arial, sans-serif;
 	padding: 0;
 	margin: 0;
 }
@@ -37,6 +115,7 @@ body {
 	min-height: 600px;
 	padding-top: 30px;
 	background: url('../img/beardman4.png') no-repeat center center / cover;
+	font-family: Elegance, Arial, sans-serif;
 }
 
 .menu {
@@ -147,12 +226,13 @@ body {
 	}
 	&_button {
 		display: none;
-		font-weight: 300;
+		font-weight: 400;
 		background-color: #F5E8DA;
 		border: thin #F5E8DA solid;
 		border-radius: 10px;
 		color: black;
 		text-decoration: none;
+		padding-top: 2px;
 		&:hover {
 			background-color: white;
 			border-color: white;
@@ -191,6 +271,8 @@ body {
 		text-align: center;
 		&Title {
 			font-size: 18px;
+			font-weight: 500;
+			line-height: 1.1;
 			color: black;
 			height: 50px;
 			padding: {
@@ -200,10 +282,12 @@ body {
 		}
 		&Cost {
 			color: black;
+			font-weight: 400;
 		}
 	}
 	&_button {
 		font-size: 11px;
+		font-weight: 500;
 		width: 80px;
 		border: solid black thin;
 		border-radius: 10px;
@@ -258,22 +342,23 @@ body {
 .good {
 	&_title {
 		text-align: center;
-		font-size: 20px;
+		font-size: 21px;
 		padding: {
 			top: 10px;
 			bottom: 10px;
 		}
 	}
 	&_img {
-		height: 460px;
+		height: 455px;
 		&Div {
 			text-align: center;
 		}
 	}
 	&_description {
 		text-align: center;
-		font-size: 16px;
+		font-size: 18px;
 		font-weight: 300;
+		line-height: 1.1;
 		padding: {
 			top: 10px;
 			bottom: 0;
@@ -290,11 +375,11 @@ body {
 	&_buyButton {
 		cursor: pointer;
 		margin: {
-			top: 5px;
-			bottom: 10px;
+			top: 2px;
+			bottom: 2px;
 		}	
 		padding: 5px;
-		font-size: 20px;
+		font-size: 18px;
 		font-weight: 500;
 		border: thin solid black;
 		background-color: white;
@@ -306,7 +391,7 @@ body {
 		text-align: center;
 	}
 	&_added {
-		font-size: 18px;
+		font-size: 17px;
 		font-weight: 300;
 		text-align: center;
 		display: none;
@@ -316,14 +401,14 @@ body {
 		display: inline-block;
 		color: #707070;
 		font-size: 18px;
-		font-weight: 500;
+		font-weight: 400;
 	}
 }
 #about {
 	text-align: center;
 	margin: {
-		top: 60px;
-		bottom: 30px;
+		top: 70px;
+		bottom: 50px;
 	}	
 }
 
@@ -337,7 +422,7 @@ body {
 		padding: {
 			right: 135px;
 			left: 135px;
-			bottom: 10px;
+			bottom: 20px;
 		}
 	}
 	&_img {
@@ -349,8 +434,8 @@ body {
 #delivery {
 	background-color: #F2F2F2;
 	padding: {
-		top: 1px;
-		bottom: 60px;
+		top: 30px;
+		bottom: 80px;
 	}
 }
 
@@ -399,7 +484,7 @@ body {
 	}
 	&_link a {
 		font-size: 32px;
-  	color: black;
+  	color: #3D3936;
 	}
 	&_cartText {
   	display: inline-block;
@@ -413,6 +498,7 @@ body {
 .cart {
 	&_header {
 		background: url('/img/Fon.jpg') no-repeat center center / cover;
+		font-family: Elegance, Arial, sans-serif;
 		height: 100px;
 		text-align: center;
 		&Item {
@@ -484,10 +570,10 @@ body {
 			}
 			&-good {
 				margin-left: 215px;
-				width: 410px;
+				width: 473px;
 			}
 			&-count {
-				width: 150px;
+				width: 85px;
 			}
 		}
 	}
@@ -601,6 +687,7 @@ body {
 		line-height: 2;
 	}
 	&_footer {
+		font-family: Elegance, Arial, sans-serif;
 		text-align: center;
 		background-color: #3D3936;
 		padding-bottom: 2px;

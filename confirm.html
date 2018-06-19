@@ -6,6 +6,7 @@
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="css/jquery.fancybox.min.css">
+	<link rel="icon" type="image/x-icon" href="img/Logo_small.png">
 </head>
 <body>
 	<header class="cart_header">
@@ -23,7 +24,7 @@
 			<div class="confirm">
 				<h3 class="confirm_title">Спасибо!</h3>
 				<div class="confirm_text">Ваш заказ успешно оформлен. Мы свяжемся с вами в ближайшее время.<br>
-				Номер вашего заказа #<p id="confirm_number">123123</p>.</div>
+				Номер вашего заказа #<p id="confirm_number"></p>.</div>
 				<a class="confirm_button" href="index.html"><i class="fas fa-arrow-left"></i> Вернуться в магазин</a>
 			</div>
 		</div>
@@ -43,6 +44,7 @@
 	<script src="js/confirm.js"></script>
 	<script>
 		showOrderNumber();
+		deleteCart();
 	</script>
 </body>
 </html>

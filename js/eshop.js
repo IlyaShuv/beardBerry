@@ -106,7 +106,7 @@ function showGoodMiniCart() { //показывает содержимое кор
 	for (var k in cart) {
 		count += 1 * cart[k];
 	}
-	$('.good_img').css('height', '440px');
+	$('.good_img').css('height', '445px');
 	$('.good_added').css('display', 'block');
 	$('.good_miniCartCount').html(count);
 }
