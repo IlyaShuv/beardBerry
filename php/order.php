@@ -20,6 +20,7 @@
 	$mail->Port = 465; 
 
 	$mail->setFrom('beardberrystore@mail.ru'); 
+	$mail->addAddress('tsehan90@gmail.com'); 
 	$mail->addAddress('wildchild24@mail.ru'); 
 	$mail->isHTML(true); 
 

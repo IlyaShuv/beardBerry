@@ -114,13 +114,14 @@ $.getJSON('goods/goods.json', function(data) {
 		var res = "";
 		var total = 0;
 		for (var key in cart) {
-			res += data[key].name;
+			var str = data[key].name;
+			res += str.replace(/&#34/g, "");
 			res += " (артикул: ";
 			res += key;
 			res += ") ";
 			res += " x";
 			res += cart[key];
-			res += ";\n"
+			res += "; "
 			total += cart[key] * goods[key].cost;
 		}
 		res += "Общая стоимость заказа: "

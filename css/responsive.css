@@ -1,4 +1,4 @@
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
   .container {
     width: 760px;
   }
@@ -75,7 +75,7 @@
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .container {
     width: 320px;
   }
@@ -293,8 +293,5 @@
     margin-right: 2px;
     margin-top: 0;
     margin-bottom: 10px;
-  }
-  .confirm_button {
-    margin-bottom: 40px;
   }
 }
