@@ -162,6 +162,9 @@ body {
 			left: 0;
 			right: 40px;
 		}
+		&-mobile {
+			display: none;
+		}	
 	}
 }
 
@@ -251,6 +254,7 @@ body {
 #catalog {
 	background-color: #F2F2F2;
 	padding-top: 10px;
+	height: calc(380px * 5 + 200px);
 }
 
 .catalog {
@@ -349,7 +353,8 @@ body {
 		}
 	}
 	&_img {
-		height: 455px;
+		width: 100%;
+		max-width: 455px;
 		&Div {
 			text-align: center;
 		}
@@ -579,6 +584,10 @@ body {
 	}
 	&_img {
 		height: 125px;
+		margin: {
+			left: 30px;
+			right: 30px;
+		}
 
 	}
 	&_row {
@@ -596,12 +605,6 @@ body {
 				top: 15px;
 				bottom: 15px;
 			}
-		}
-	}
-	&_img {
-		margin: {
-			left: 30px;
-			right: 30px;
 		}
 	}
 	&_name {
@@ -768,6 +771,7 @@ body {
 			top: 30px;
 			left: auto;
 			right: auto;
+			bottom: 30px;
 		}
 		padding: 8px;
 		font-size: 24px;

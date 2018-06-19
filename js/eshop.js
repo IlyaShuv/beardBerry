@@ -10,11 +10,8 @@ function start() {
 
 function loadGoods() {//загружаем товары на страницу
 	$.getJSON('../goods/goods.json', function(data) {
-		//console.log(data);
 		var out = "";
-		var count = 0; //Подсчет количества товаров
 		for (var key in data) {
-			count++;
 			out += '<div class="catalog_singleGoods"><a class="catalog_fancy" href="good.html?title='+data[key].name+'&image='+data[key].image+'&description='+data[key].description+'&cost='+data[key].cost+'&articul='+key+'"; data-fancybox data-options="{&quot;type&quot; : &quot;iframe&quot;, &quot;iframe&quot; : {&quot;preload&quot; : false, &quot;css&quot; : {&quot;width&quot; : &quot;650px&quot;,&quot;height&quot; : &quot;1150px&quot;}}}">';
 			out += '<h3 class="catalog_singleGoodsTitle">'+data[key]['name']+'</h3>';
 			out += '<p class="catalog_singleGoodsCost">'+data[key]['cost']+' руб.</p>';
@@ -22,8 +19,6 @@ function loadGoods() {//загружаем товары на страницу
 			out += '<button class="catalog_button" data-art="'+key+'">Купить</button>';
 			out += '</div>';
 		}
-		var rows = Math.ceil(count/4);
-		$('#catalog').css('height', rows*380+200 + "px"); //Подсчет высоты поля catalog
 		$('#catalog_goods').html(out);
 		$('.catalog_button').on('click', addToCart);
 		$(".catalog_fancy").fancybox({
@@ -106,7 +101,7 @@ function showGoodMiniCart() { //показывает содержимое кор
 	for (var k in cart) {
 		count += 1 * cart[k];
 	}
-	$('.good_img').css('height', '445px');
+	$('.good_img').css('max-width', '445px');
 	$('.good_added').css('display', 'block');
 	$('.good_miniCartCount').html(count);
 }
