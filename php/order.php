@@ -10,6 +10,7 @@
 	$phone = $_POST['phone']; 
 	$email = $_POST['E-mail']; 
 	$address = $_POST['address']; 
+	$comment = $_POST['comment']; 
 	$orderNumber = $_POST['orderNumber']; 
 	$orderItems = $_POST['orderItems']; 
 
@@ -27,7 +28,7 @@
 	$mail->isHTML(true); 
 
 	$mail->Subject = 'Заказ с сайта Beard Berry Store'; 
-	$mail->Body = 'Имя: ' .$name . '<br> Телефон: ' .$phone. '<br> E-mail: ' .$email. '<br> Адрес доставки: ' .$address. '<br> Заказ: ' .$orderItems. '<br> номер заказа: ' .$orderNumber; 
+	$mail->Body = 'Имя: ' .$name . '<br> Телефон: ' .$phone. '<br> E-mail: ' .$email. '<br> Адрес доставки: ' .$address. '<br> Комментарии: ' .$comment. '<br> Заказ: ' .$orderItems. '<br> номер заказа: ' .$orderNumber; 
 	$mail->AltBody = ''; 
 
 
@@ -39,7 +40,8 @@
 		'E-mail: ' => $email,
 		'Адрес: ' => $address,
 		'Товары: ' => $orderItems,
-		'Номер заказа: ' => $orderNumber
+		'Номер заказа: ' => $orderNumber,
+		'Комментарии: ' => $comment
 	);
 
 	foreach ($arr as $key => $value) {
