@@ -596,7 +596,7 @@ body {
 			}
 			&-good {
 				margin-left: 215px;
-				width: 463px;
+				width: 467px;
 			}
 			&-count {
 				width: 85px;
@@ -648,12 +648,15 @@ body {
 	}
 	&_butMinus {
 		cursor: pointer;
+		width: 28px;
 	}
 	&_butPlus {
 		cursor: pointer;
+		width: 28px;
 	}
 	&_butDelete {
 		cursor: pointer;
+		width: 28px;
 	}
   &_count {
   	text-align: center;

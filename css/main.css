@@ -561,7 +561,7 @@ body {
 
 .cartHead_item-good {
   margin-left: 215px;
-  width: 463px;
+  width: 467px;
 }
 
 .cartHead_item-count {
@@ -607,14 +607,17 @@ body {
 
 .cart_butMinus {
   cursor: pointer;
+  width: 28px;
 }
 
 .cart_butPlus {
   cursor: pointer;
+  width: 28px;
 }
 
 .cart_butDelete {
   cursor: pointer;
+  width: 28px;
 }
 
 .cart_count {
