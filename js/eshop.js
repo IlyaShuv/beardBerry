@@ -2,6 +2,7 @@ var cart = {}; //корзина
 
 function start() {
 	$('document').ready(function() {
+		$('.catalog_static').css('display', 'none');
 		loadGoods();
 		checkCart();
 		showMiniCart();

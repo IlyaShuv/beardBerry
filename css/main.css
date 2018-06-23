@@ -281,6 +281,28 @@ body {
   text-decoration: none;
 }
 
+.catalog_static {
+  background-color: white;
+}
+
+.catalog_staticSingleGoods {
+  width: 230px;
+  height: 620px;
+  border: thin solid black;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 8px;
+  margin-left: 8px;
+  float: left;
+  text-align: center;
+}
+
+.catalog_staticBottom {
+  float: left;
+  height: 700px;
+  width: 230px;
+}
+
 .fancy_buyButton {
   display: inline-block;
   cursor: pointer;

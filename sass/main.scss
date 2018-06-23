@@ -303,6 +303,27 @@ body {
 	&_fancy {
 		text-decoration: none;
 	}
+	&_static {
+		background-color: white;
+		&SingleGoods {
+			width: 230px;
+			height: 620px;
+			border: thin solid black;
+			margin: {
+				top: 10px;
+				bottom: 10px;
+				right: 8px;
+				left: 8px;
+			}
+			float: left;
+			text-align: center;
+		}
+		&Bottom {
+			float: left;
+			height: 700px;
+			width: 230px;
+		}
+	}
 }
 
 .fancy {
