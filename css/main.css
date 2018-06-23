@@ -608,16 +608,19 @@ body {
 .cart_butMinus {
   cursor: pointer;
   width: 28px;
+  text-align: center;
 }
 
 .cart_butPlus {
   cursor: pointer;
   width: 28px;
+  text-align: center;
 }
 
 .cart_butDelete {
   cursor: pointer;
   width: 28px;
+  text-align: center;
 }
 
 .cart_count {
