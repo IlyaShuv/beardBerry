@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /cart
+Disallow: /confirm
+Disallow: /agreement.pdf
+Disallow: /policy.pdf
+Allow: /index
